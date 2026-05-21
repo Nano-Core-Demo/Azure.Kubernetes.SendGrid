@@ -17,7 +17,7 @@ env:
   SENDGRID_SENDER_EMAIL: ${{ vars.SENDGRID_SENDER_EMAIL }}
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
       id-token: write
