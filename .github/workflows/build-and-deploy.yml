@@ -35,7 +35,6 @@ jobs:
 
           az login --service-principal -u $env:AZURE_CLIENT_ID -p $env:AZURE_CLIENT_SECRET --tenant $env:AZURE_TENANT_ID;
           az account set -s $env:AZURE_SUBSCRIPTION_ID;
-          az aks get-credentials -g $env:AZURE_GROUP_KUBERNETES -n $env:KUBERNETES_CLUSTER;
 
       - name: Deploy SendGrid Secret
         shell: pwsh
