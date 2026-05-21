@@ -31,9 +31,6 @@ jobs:
       - name: Azure Login
         shell: pwsh
         run: |
-          echo $env:KUBERNETES_CLUSTER;
-          echo $env:AZURE_GROUP_KUBERNETES;
-
           az login --service-principal -u $env:AZURE_CLIENT_ID -p $env:AZURE_CLIENT_SECRET --tenant $env:AZURE_TENANT_ID -o none;
           az account set -s $env:AZURE_SUBSCRIPTION_ID -o none;
           az aks get-credentials -g $env:AZURE_GROUP_KUBERNETES -n $env:KUBERNETES_CLUSTER -o none;
